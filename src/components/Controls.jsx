@@ -21,10 +21,12 @@ export default function Controls({ value, setValue }) {
 
     const handleClickDownload = () => {
         var node = document.querySelector("#score")
+        node.style.width = "1280px"
 
         toPng(node)
             .then(function (dataUrl) {
                 download(dataUrl, "download.png")
+                node.style.width = "auto"
             })
             .catch(function (error) {
                 console.error("oops, something went wrong!", error)
