@@ -1,0 +1,15 @@
+.wrapper {
+  
+
+  background-image: url("/stadium.jpg");
+  background-size: cover;
+}
+
+.container {
+  background-color: black;
+  opacity: 0.8;
+}
+
+.MuiTypography-root {
+  text-transform: uppercase;
+}
