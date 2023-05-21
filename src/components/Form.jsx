@@ -150,7 +150,7 @@ export default function Form({
                                     </Grid>
                                     <Grid item md={3}>
                                         <TextField
-                                            label="Overs"
+                                            label="Balls"
                                             variant="outlined"
                                             fullWidth
                                             name={`team${team}batsman${el}balls`}
@@ -212,10 +212,10 @@ export default function Form({
                                             label="Wickets"
                                             variant="outlined"
                                             fullWidth
-                                            name={`team${team}wickets${el}overs`}
+                                            name={`team${team}bowler${el}wickets`}
                                             value={
                                                 value[
-                                                    `team${team}wickets${el}overs`
+                                                    `team${team}bowler${el}wickets`
                                                 ]
                                             }
                                             onChange={handleChange}

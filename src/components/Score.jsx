@@ -2,11 +2,15 @@ import { useState } from "react"
 
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
 
 import TeamDetail from "./TeamDetail"
 import PlayerDetail from "./PlayerDetail"
 import MatchSummary from "./MatchSummary"
 import Controls from "./Controls"
+
+import player from "../assets/player.png"
+import player2 from "../assets/player2.png"
 
 const Score = () => {
     const [value, setValue] = useState({
@@ -82,6 +86,27 @@ const Score = () => {
         <>
             <div id="score" className="wrapper">
                 <div className="container">
+                    <Box
+                        component="img"
+                        sx={{
+                            position: "absolute",
+                            height: 450,
+                            left: -100,
+                            bottom: 0,
+                            zIndex: -1,
+                        }}
+                        src={player}
+                    />
+                    <Box
+                        component="img"
+                        sx={{
+                            position: "absolute",
+                            right: 0,
+                            height: 300,
+                            zIndex: -1,
+                        }}
+                        src={player2}
+                    />
                     <Container maxWidth="md" sx={{ pt: 2, height: "100vh" }}>
                         <Typography variant="h4" textAlign="center">
                             MATCH SUMMARY
@@ -91,7 +116,7 @@ const Score = () => {
                             gutterBottom
                             textAlign="center"
                         >
-                            Level Series 2023
+                            Amizh-karo trophy 2023
                         </Typography>
                         <TeamDetail team={1} value={value} />
                         <PlayerDetail team={1} value={value} />
